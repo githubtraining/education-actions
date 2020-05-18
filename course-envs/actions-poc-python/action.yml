@@ -12,7 +12,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: docker://containers.pkg.github.com/mattdavis0351/actions-poc:latest
+  image: Dockerfile
   args:
     - ${{inputs.test}}
     - ${{inputs.file}}
