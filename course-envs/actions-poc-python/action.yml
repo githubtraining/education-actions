@@ -5,7 +5,7 @@ description: test a file supplied by user for accuracy
 inputs:
   test:
     description: test from the course repo youd like to perform
-    required: false
+    required: true
 
 runs:
   using: "docker"
