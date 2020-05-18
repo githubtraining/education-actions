@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh -l
 
 mv "$GITHUB_WORKSPACE/$2" /usr/src/app
 
