@@ -9,6 +9,6 @@ inputs:
 
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: containers.pkg.github.com/mattdavis0351/actions-poc:latest
   args:
     - ${{inputs.test}}
