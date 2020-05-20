@@ -9,13 +9,13 @@ inputs:
   file:
     description: file to run tests for
     required: true
-  course-image:
+  courseimage:
     description: image and tag for the course environment
     required: true
 
 runs:
   using: "docker"
-  image: ${{inputs.course-image}}
+  image: ${{inputs.courseimage}}
   args:
     - ${{inputs.test}}
     - ${{inputs.file}}
