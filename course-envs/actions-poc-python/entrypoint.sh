@@ -1,9 +1,7 @@
 #!/bin/sh -l
 
-echo "something for you"
-mv "$GITHUB_WORKSPACE/$2" /usr/src/app
+mv "$GITHUB_WORKSPACE/$2" /tests
 
-cd /usr/src/app
+pip install --no-cache-dir pytest
 
-pwd 
-pytest /usr/src/app/$1
+pytest /tests/$1
