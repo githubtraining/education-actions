@@ -16,4 +16,4 @@ runs:
   args:
     - ${{inputs.test}}
     - ${{inputs.file}}
-  entrypoint: "./entrypoint.sh" # add to test for reusability.  Add pip install to script.
+  entrypoint: "/entrypoint2.sh" # add to test for reusability.  Add pip install to script.
