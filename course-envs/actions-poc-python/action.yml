@@ -4,11 +4,15 @@ description: test a file supplied by user for accuracy
 
 inputs:
   test:
-    description: test from the course repo youd like to perform
+    description: test from the course repo youd like to perform, do not include a file extension
     required: true
   file:
     description: file to run tests for
     required: true
+
+outputs:
+  error:
+    description: The file containing the error to be sent to the learner
 
 runs:
   using: "docker"
