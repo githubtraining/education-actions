@@ -15,7 +15,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://${{inputs.courseimage}}"
+  image: "docker://containers.pkg.github.com/mattdavis0351/actions-poc"
   args:
     - ${{inputs.test}}
     - ${{inputs.file}}
