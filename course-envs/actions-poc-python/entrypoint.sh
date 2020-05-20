@@ -2,7 +2,15 @@
 
 mv "$GITHUB_WORKSPACE/$2" /tests
 
-ERROR_FILE=$(cat /errors/$1.md)
-echo "::set-output name=error::$ERROR_FILE"
+ERROR_FILE=$(</errors/$1.md)
 
-pytest /tests/$1.py
+TEST_RESULT=$(pytest /tests/$1.py)
+
+echo $TEST_RESULT
+
+if [[ $TEST_RESULT == *"failed"* ]]; then
+
+    echo "::set-output name=error::$ERROR_FILE"
+fi
+
+
