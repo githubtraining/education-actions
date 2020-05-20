@@ -9,9 +9,6 @@ inputs:
   file:
     description: file to run tests for
     required: true
-  courseimage:
-    description: image and tag for the course environment
-    required: true
 
 runs:
   using: "docker"
