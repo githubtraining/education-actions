@@ -27,6 +27,7 @@ mv "$GITHUB_WORKSPACE/$2" /tests
 
 
 pytest /tests/$1.py && {
+    echo "you fail"
 
     cat /errors/$1.md
     exit 1
