@@ -11,8 +11,9 @@ echo Pytest exited $?
 PR_NUMBER=2
 ERROR_FILE="$(</errors/$1.md)"
 
-curl -s -H "Authorization: token ${INPUT_AUTH}" \
+
 # -X POST -d '{"body": $ERROR_FILE}' \
+curl -s -H "Authorization: token ${INPUT_AUTH}" \
 -X POST -d '{"body": ${ERROR_FILE}}' \
 "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments"
 
