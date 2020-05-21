@@ -26,12 +26,16 @@ mv "$GITHUB_WORKSPACE/$2" /tests
 # echo "::set-output name=error::$ERROR_FILE"
 
 
-pytest /tests/$1.py
+pytest /tests/$1.py && {
 
-if [[ $? == 0 ]]; then
     cat /errors/$1.md
-    exit 0
-fi
+    exit 1
+}
+
+# if [[ $? == 0 ]]; then
+#     cat /errors/$1.md
+#     exit 0
+# fi
 
 
 
