@@ -18,7 +18,7 @@ PR_NUMBER=2
 # "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments"
 
 ERROR_FILE="$(</errors/$1.md)"
-echo ERROR_FILE
+echo $ERROR_FILE
 ERROR_FILE="${ERROR_FILE//'%'/'%25'}"
 ERROR_FILE="${ERROR_FILE//$'\n'/'%0A'}"
 ERROR_FILE="${ERROR_FILE//$'\r'/'%0D'}"
