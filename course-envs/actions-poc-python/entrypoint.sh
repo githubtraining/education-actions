@@ -29,7 +29,7 @@ mv "$GITHUB_WORKSPACE/$2" /tests
 pytest /tests/$1.py
 
 if [[ $? == 0 ]]; then
-    cat /errors$1.md
+    cat /errors/$1.md
     exit 0
 fi
 
