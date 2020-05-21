@@ -8,7 +8,7 @@ pytest /tests/$1.py
 echo Pytest exited $?
 # if test success, move on
 # else comment failure with failure message
-PR_NUMBER=4
+PR_NUMBER=5
 
 curl -s -H "Authorization: token ${INPUT_AUTH}" \
 -X POST -d '{"body": "Your Message to Comment"}' \
