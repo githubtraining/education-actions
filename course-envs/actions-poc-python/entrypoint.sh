@@ -3,12 +3,12 @@
 # copy user files to testing directory
 mv "$GITHUB_WORKSPACE/$2" /tests
 # run tests
-pytest /tests/$1.py
+
 # Get the result of pytest
-echo Pytest exited $?
-# if test success, move on
-# else comment failure with failure message
-PR_NUMBER=2
+# echo Pytest exited $?
+# # if test success, move on
+# # else comment failure with failure message
+# PR_NUMBER=2
 # ERROR_FILE="$(</errors/$1.md)"
 
 
@@ -26,7 +26,7 @@ ERROR_FILE="${ERROR_FILE//$'\r'/'%0D'}"
 echo "::set-output name=error::$ERROR_FILE"
 
 
-
+pytest /tests/$1.py
 
 
 
