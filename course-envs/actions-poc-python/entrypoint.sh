@@ -8,7 +8,7 @@ pytest /tests/$1.py
 echo Pytest exited $?
 # if test success, move on
 # else comment failure with failure message
-PR_NUMBER=6
+PR_NUMBER=2
 ERROR_FILE="$(</errors/$1.md)"
 
 curl -s -H "Authorization: token ${INPUT_AUTH}" \
