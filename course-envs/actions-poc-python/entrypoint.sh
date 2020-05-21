@@ -26,7 +26,7 @@ mv "$GITHUB_WORKSPACE/$2" /tests
 # echo "::set-output name=error::$ERROR_FILE"
 
 
-pytest /tests/$1.py && {
+pytest /tests/$1.py || {
     echo "you fail"
 
     cat /errors/$1.md
