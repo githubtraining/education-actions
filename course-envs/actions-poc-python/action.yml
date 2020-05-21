@@ -9,6 +9,9 @@ inputs:
   file:
     description: file to run tests for
     required: true
+  auth:
+    description: token used to authenticate with api
+    required: true
 
 outputs:
   error:

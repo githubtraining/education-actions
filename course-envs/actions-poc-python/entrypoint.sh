@@ -10,7 +10,7 @@ echo Pytest exited $?
 # else comment failure with failure message
 PR_NUMBER=4
 
-curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
+curl -s -H "Authorization: token ${INPUT_AUTH}" \
 -X POST -d '{"body": "Your Message to Comment"}' \
 "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments"
 
