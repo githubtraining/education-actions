@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#export PATH="$PATH:`pwd`/flutter/bin";
+ls
+pwd
 ./flutter/bin/flutter channel $1;
 ./flutter/bin/flutter upgrade;
 if [[ "$2" == "web" ]]; then
