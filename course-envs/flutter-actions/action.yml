@@ -1,0 +1,22 @@
+name: 'Github Education Flutter actions'
+description: 'Basic Flutter actions to enable rapid development.'
+
+inputs:
+  channel:
+    description: 'The Flutter channel to use (e.g. master, dev, beta, stable.)'
+    required: false
+    default: stable
+  build:
+    description: 'The build target type (e.g. aar, aot, apk, appbundle, bundle, ios, ios-framework, web)'
+    required: true
+  test:
+    description: 'Boolean field specifying whether or not Flutter tests should be run.'
+    required: false
+    default: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.channel }}
+    - ${{ inputs.build }}
