@@ -20,7 +20,3 @@ runs:
   args:
     - ${{ inputs.channel }}
     - ${{ inputs.build }}
-
-branding:
-  icon: 'fast-forward'
-  color: 'blue'
