@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo $PATH
 flutter channel $1;
 flutter upgrade;
 
