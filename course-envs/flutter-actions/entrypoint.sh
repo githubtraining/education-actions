@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ls
+ls /
 pwd
 ./flutter/bin/flutter channel $1;
 ./flutter/bin/flutter upgrade;
