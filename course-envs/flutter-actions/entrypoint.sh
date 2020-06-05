@@ -1,16 +1,12 @@
 #!/bin/bash
 
 export PATH="$PATH:/flutter/bin"
-echo $PATH
-flutter channel $1;
-flutter upgrade;
 
-if [[ "$2" == "web" ]]; then
-  flutter config --enable-web;
-fi
-
-if [[ "$3" == "true" ]]; then
+if [[ "$1" == "true" ]]; then
   flutter test;
 fi
 
-flutter build $2;
+# Add versioning here, base on current timestamp
+# This should fix the web caching issue!
+# https://medium.com/@ralphbergmann/versioning-with-flutter-299869e68af4
+flutter build web;
