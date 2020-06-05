@@ -6,9 +6,6 @@ if [[ "$1" == "true" ]]; then
   flutter test;
 fi
 
-# Add versioning here, base on current timestamp
-# This should fix the web caching issue!
-# https://medium.com/@ralphbergmann/versioning-with-flutter-299869e68af4
 flutter config --enable-web;
 flutter pub get;
 flutter build web;
